@@ -1,0 +1,33 @@
+<div style="margin:30px">
+
+
+<h1>Movies</h1>
+
+<table class="table table-striped table-hover table-bordered">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Language</th>
+      <th>Rating</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @movies.each do |movie| %>
+      <tr>
+        <td><%= movie.name %></td>
+        <td><%= movie.language %></td>
+        <td><%= movie.rating %></td>
+        <td><%= link_to 'Show', movie, class:"btn btn-outline-primary" %></td>
+        <td><%= link_to 'Edit', edit_movie_path(movie), class:"btn btn-outline-success"  %></td>
+        <td><%= link_to 'Delete', movie, method: :delete, data: { confirm: 'Are you sure?' } , class:"btn btn-outline-danger"  %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'Add Movie', new_movie_path,class:"btn btn-outline-primary" %>
+</div>
