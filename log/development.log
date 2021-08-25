@@ -4629,3 +4629,67 @@ Processing by MoviesController#index as HTML
 Completed 200 OK in 55ms (Views: 53.9ms | ActiveRecord: 0.3ms | Allocations: 6619)
 
 
+Started GET "/" for ::1 at 2021-08-25 23:24:06 +0530
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 3.5ms | Allocations: 233)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered home/_header.html.erb (Duration: 1.5ms | Allocations: 266)
+  Rendered layout layouts/application.html.erb (Duration: 83.8ms | Allocations: 10236)
+Completed 200 OK in 135ms (Views: 94.7ms | ActiveRecord: 0.0ms | Allocations: 13000)
+
+
+Started GET "/movies" for ::1 at 2021-08-25 23:24:09 +0530
+Processing by MoviesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering movies/index.html.erb within layouts/application
+  [1m[36mMovie Load (0.7ms)[0m  [1m[34mSELECT "movies".* FROM "movies"[0m
+  ↳ app/views/movies/index.html.erb:17
+  Rendered movies/index.html.erb within layouts/application (Duration: 49.4ms | Allocations: 5204)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered home/_header.html.erb (Duration: 0.9ms | Allocations: 87)
+  Rendered layout layouts/application.html.erb (Duration: 67.8ms | Allocations: 9017)
+Completed 200 OK in 83ms (Views: 72.4ms | ActiveRecord: 2.8ms | Allocations: 10280)
+
+
+Started GET "/home/about" for ::1 at 2021-08-25 23:24:10 +0530
+Processing by HomeController#about as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/about.html.erb within layouts/application
+  Rendered home/about.html.erb within layouts/application (Duration: 1.4ms | Allocations: 118)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered home/_header.html.erb (Duration: 0.2ms | Allocations: 100)
+  Rendered layout layouts/application.html.erb (Duration: 17.1ms | Allocations: 3943)
+Completed 200 OK in 20ms (Views: 18.1ms | ActiveRecord: 0.0ms | Allocations: 4455)
+
+
+Started GET "/movies" for ::1 at 2021-08-25 23:24:11 +0530
+Processing by MoviesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering movies/index.html.erb within layouts/application
+  [1m[36mMovie Load (1.8ms)[0m  [1m[34mSELECT "movies".* FROM "movies"[0m
+  ↳ app/views/movies/index.html.erb:17
+  Rendered movies/index.html.erb within layouts/application (Duration: 4.4ms | Allocations: 947)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered home/_header.html.erb (Duration: 0.4ms | Allocations: 87)
+  Rendered layout layouts/application.html.erb (Duration: 19.9ms | Allocations: 4757)
+Completed 200 OK in 22ms (Views: 18.7ms | ActiveRecord: 1.8ms | Allocations: 5151)
+
+
+Started GET "/movies/4" for ::1 at 2021-08-25 23:24:12 +0530
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mMovie Load (0.9ms)[0m  [1m[34mSELECT "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/movies_controller.rb:62:in `set_movie'
+  Rendering layout layouts/application.html.erb
+  Rendering movies/show.html.erb within layouts/application
+  Rendered movies/show.html.erb within layouts/application (Duration: 1.9ms | Allocations: 292)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered home/_header.html.erb (Duration: 0.2ms | Allocations: 86)
+  Rendered layout layouts/application.html.erb (Duration: 14.2ms | Allocations: 4103)
+Completed 200 OK in 28ms (Views: 15.4ms | ActiveRecord: 0.9ms | Allocations: 5622)
+
+
